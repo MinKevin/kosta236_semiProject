@@ -1,6 +1,6 @@
 package test.model;
 
 public class test {public test() {
-	System.out.println("장규님~~~~");
+	System.out.println("장규님~~~~ 엥");
 }
 }
