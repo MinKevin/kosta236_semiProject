@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+<!--	이름을 줄여서 쓰겠다-->
+	<typeAliases>
+		<typeAlias type="domain.MyPage.Attendance" alias="Attendance"/>
+		<typeAlias type="domain.MyPage.PrivateInfo" alias="PrivateInfo"/>
+		<typeAlias type="domain.MyPage.PayStub" alias="PayStub"/>
+		<typeAlias type="domain.MyPage.PhoneBook" alias="PhoneBook"/>
+		<typeAlias type="domain.MyPage.AnnualLeave" alias="AnnualLeave"/>
+	</typeAliases>
+
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC"/>
+<!--			JNDI 방식-->
+			<dataSource type="JNDI">
+				<property name="data_source" value="java:comp/env/jdbc/oracle"/>
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+		<mapper resource="mapper/MyPage/MapperDetail.xml"/>
+	</mappers>
+</configuration>
